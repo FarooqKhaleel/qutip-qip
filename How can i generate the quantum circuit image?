@@ -1,0 +1,31 @@
+Dear Respected Members of the Group,
+I hope you are doing well.
+I am trying to reproduce the results of the following post:
+
+https://nbviewer.ipython.org/github/qutip/qutip-notebooks/blob/master/examples/quantum-gates.ipynb#Gates-in-QuTiP-and-their-representation
+
+in windows 10 environment and with Imagemagick, perl, Ghostscript and Latex are all installed and verified.
+However, it seems like it cant generate the qcirc.pdf file. I receive the following error,
+
+Warning (from warnings module):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\qutip_qip\circuit_latex.py", line 128
+    warnings.warn("Could not locate system 'pdfcrop':"
+UserWarning: Could not locate system 'pdfcrop': image output may have additional margins.
+Traceback (most recent call last):
+  File "C:\Users\msi-pc\Desktop\farrrrr.py", line 11, in <module>
+    q.png
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\qutip_qip\circuit.py", line 1821, in png
+    return DisplayImage(self._raw_png(), embed=True)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\qutip_qip\circuit.py", line 1811, in _raw_png
+    return _latex.image_from_latex(self.latex_code(), "png")
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\qutip_qip\circuit_latex.py", line 245, in image_from_latex
+    out = CONVERTERS[file_type](filename)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\qutip_qip\circuit_latex.py", line 180, in converter
+    _run_command((which, *configuration.arguments, in_file, out_file))
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\qutip_qip\circuit_latex.py", line 65, in _run_command
+    raise RuntimeError(e.stderr.decode(sys.stderr.encoding)) from None
+RuntimeError: magick: unable to open image 'qcirc.pdf': No such file or directory @ error/blob.c/OpenBlob/3537.
+
+I kindly ask for your help with many thanks in advance.
+Thank you very much
+Yours sincerely,
